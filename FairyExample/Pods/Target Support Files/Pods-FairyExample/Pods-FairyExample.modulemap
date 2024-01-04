@@ -1,0 +1,6 @@
+framework module Pods_FairyExample {
+  umbrella header "Pods-FairyExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

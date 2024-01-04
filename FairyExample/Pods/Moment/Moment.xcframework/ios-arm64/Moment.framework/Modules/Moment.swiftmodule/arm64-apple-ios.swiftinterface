@@ -1,0 +1,87 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios14.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Moment
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import BigInt
+import Combine
+import CryptoKit
+import CryptoSwift
+import Darwin
+import Dispatch
+import Foundation
+import Logging
+@_exported import Moment
+import Moya
+import NIO
+import NIOCore
+import NIOExtras
+import NIOHTTP1
+import NIOPosix
+import Network
+import NetworkExtension
+import OSLog
+import Swift
+import SwiftProtobuf
+import SwiftyBase64
+import UIKit
+import UserNotifications
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class MomentConstants {
+  public static let MOMENT_NOTIFICATION_KEY: Swift.String
+  @objc deinit
+}
+public enum MomentError : Swift.Error {
+  case vpnStartFailed(underlyingError: any Swift.Error)
+  case noUserId
+  case authFailed(underlyingError: any Swift.Error)
+  case notInitialized
+  case noInternetConnection
+  case jailBrokenDevice
+  case unableToAccessSharedDefaults
+  case fetchInfoFailed(underlyingError: any Swift.Error)
+}
+extension Moment.MomentError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers open class PacketTunnelProvider : NetworkExtension.NEPacketTunnelProvider {
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc override dynamic public func startTunnel(options: [Swift.String : ObjectiveC.NSObject]? = nil) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc override dynamic public func stopTunnel(with reason: NetworkExtension.NEProviderStopReason) async
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc override dynamic public func handleAppMessage(_ messageData: Foundation.Data) async -> Foundation.Data?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc override dynamic public func sleep() async
+  #endif
+  @objc override dynamic public func wake()
+  #if compiler(>=5.3) && $AsyncAwait
+  open func handleRecognitionResult(recognizedBusinessID: Swift.String) async
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_Concurrency.MainActor public func handleMomentNotification(response: UserNotifications.UNNotificationResponse)
+@_hasMissingDesignatedInitializers public class MomentServiceManager {
+  public static let shared: Moment.MomentServiceManager
+  public static func initialize(packetTunnelBundleIdentifier: Swift.String)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func start() async throws
+  #endif
+  public func start(completion: @escaping ((any Swift.Error)?) -> Swift.Void)
+  public func stop()
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getVPNStatus() async -> NetworkExtension.NEVPNStatus?
+  #endif
+  public func withVPNStatus(completion: @escaping (NetworkExtension.NEVPNStatus?) -> Swift.Void)
+  public func setMarketingPushConsent(agreed: Swift.Bool)
+  public func setUserId(to userId: Swift.String)
+  public func setVPNProfileName(to name: Swift.String)
+  @objc deinit
+}
