@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C26E87E2B4FDA6700A30E7F /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5C26E87D2B4FDA6700A30E7F /* Moment */; };
+		5C26E8802B4FDA7100A30E7F /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5C26E87F2B4FDA7100A30E7F /* Moment */; };
+		5CC17DC72B05DD8600ED59F2 /* FairyExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC17DC62B05DD8600ED59F2 /* FairyExampleApp.swift */; };
+		5CC17DC92B05DD8600ED59F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC17DC82B05DD8600ED59F2 /* ContentView.swift */; };
+		5CC17DCB2B05DD8700ED59F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC17DCA2B05DD8700ED59F2 /* Assets.xcassets */; };
+		5CC17DCE2B05DD8700ED59F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC17DCD2B05DD8700ED59F2 /* Preview Assets.xcassets */; };
+		5CC17DDB2B05DE1300ED59F2 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC17DDA2B05DE1300ED59F2 /* NetworkExtension.framework */; };
+		5CC17DDE2B05DE1300ED59F2 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC17DDD2B05DE1300ED59F2 /* PacketTunnelProvider.swift */; };
+		5CC17DE32B05DE1300ED59F2 /* PacketTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5CC17DD82B05DE1300ED59F2 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5CC17DE12B05DE1300ED59F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CC17DBB2B05DD8600ED59F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CC17DD72B05DE1300ED59F2;
+			remoteInfo = PacketTunnel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5C42C0342B457EBA009DE75F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC17DE72B05DE1300ED59F2 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5CC17DE32B05DE1300ED59F2 /* PacketTunnel.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC17DEF2B05E3F600ED59F2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5CC17DC32B05DD8600ED59F2 /* FairyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC17DC62B05DD8600ED59F2 /* FairyExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairyExampleApp.swift; sourceTree = "<group>"; };
+		5CC17DC82B05DD8600ED59F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5CC17DCA2B05DD8700ED59F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CC17DCD2B05DD8700ED59F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5CC17DD82B05DE1300ED59F2 /* PacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC17DDA2B05DE1300ED59F2 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		5CC17DDD2B05DE1300ED59F2 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		5CC17DDF2B05DE1300ED59F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CC17DE02B05DE1300ED59F2 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
+		5CC17DE82B05DE5200ED59F2 /* FairyExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairyExample.entitlements; sourceTree = "<group>"; };
+		5CC17DE92B05DEDD00ED59F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CC17DC02B05DD8600ED59F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C26E87E2B4FDA6700A30E7F /* Moment in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC17DD52B05DE1300ED59F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C26E8802B4FDA7100A30E7F /* Moment in Frameworks */,
+				5CC17DDB2B05DE1300ED59F2 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CC17DBA2B05DD8600ED59F2 = {
+			isa = PBXGroup;
+			children = (
+				5CC17DC52B05DD8600ED59F2 /* FairyExample */,
+				5CC17DDC2B05DE1300ED59F2 /* PacketTunnel */,
+				5CC17DD92B05DE1300ED59F2 /* Frameworks */,
+				5CC17DC42B05DD8600ED59F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CC17DC42B05DD8600ED59F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CC17DC32B05DD8600ED59F2 /* FairyExample.app */,
+				5CC17DD82B05DE1300ED59F2 /* PacketTunnel.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CC17DC52B05DD8600ED59F2 /* FairyExample */ = {
+			isa = PBXGroup;
+			children = (
+				5CC17DE92B05DEDD00ED59F2 /* Info.plist */,
+				5CC17DE82B05DE5200ED59F2 /* FairyExample.entitlements */,
+				5CC17DC62B05DD8600ED59F2 /* FairyExampleApp.swift */,
+				5CC17DC82B05DD8600ED59F2 /* ContentView.swift */,
+				5CC17DCA2B05DD8700ED59F2 /* Assets.xcassets */,
+				5CC17DCC2B05DD8700ED59F2 /* Preview Content */,
+			);
+			path = FairyExample;
+			sourceTree = "<group>";
+		};
+		5CC17DCC2B05DD8700ED59F2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5CC17DCD2B05DD8700ED59F2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5CC17DD92B05DE1300ED59F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CC17DDA2B05DE1300ED59F2 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CC17DDC2B05DE1300ED59F2 /* PacketTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				5CC17DDD2B05DE1300ED59F2 /* PacketTunnelProvider.swift */,
+				5CC17DDF2B05DE1300ED59F2 /* Info.plist */,
+				5CC17DE02B05DE1300ED59F2 /* PacketTunnel.entitlements */,
+			);
+			path = PacketTunnel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CC17DC22B05DD8600ED59F2 /* FairyExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC17DD12B05DD8700ED59F2 /* Build configuration list for PBXNativeTarget "FairyExample" */;
+			buildPhases = (
+				5CC17DBF2B05DD8600ED59F2 /* Sources */,
+				5CC17DC02B05DD8600ED59F2 /* Frameworks */,
+				5CC17DC12B05DD8600ED59F2 /* Resources */,
+				5CC17DE72B05DE1300ED59F2 /* Embed Foundation Extensions */,
+				5CC17DEF2B05E3F600ED59F2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CC17DE22B05DE1300ED59F2 /* PBXTargetDependency */,
+			);
+			name = FairyExample;
+			packageProductDependencies = (
+				5C26E87D2B4FDA6700A30E7F /* Moment */,
+			);
+			productName = FairyExample;
+			productReference = 5CC17DC32B05DD8600ED59F2 /* FairyExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5CC17DD72B05DE1300ED59F2 /* PacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC17DE42B05DE1300ED59F2 /* Build configuration list for PBXNativeTarget "PacketTunnel" */;
+			buildPhases = (
+				5CC17DD42B05DE1300ED59F2 /* Sources */,
+				5CC17DD52B05DE1300ED59F2 /* Frameworks */,
+				5CC17DD62B05DE1300ED59F2 /* Resources */,
+				5C42C0342B457EBA009DE75F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacketTunnel;
+			packageProductDependencies = (
+				5C26E87F2B4FDA7100A30E7F /* Moment */,
+			);
+			productName = PacketTunnel;
+			productReference = 5CC17DD82B05DE1300ED59F2 /* PacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CC17DBB2B05DD8600ED59F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					5CC17DC22B05DD8600ED59F2 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					5CC17DD72B05DE1300ED59F2 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 5CC17DBE2B05DD8600ED59F2 /* Build configuration list for PBXProject "FairyExample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5CC17DBA2B05DD8600ED59F2;
+			packageReferences = (
+				5C26E87C2B4FDA6700A30E7F /* XCRemoteSwiftPackageReference "MomentVPN" */,
+			);
+			productRefGroup = 5CC17DC42B05DD8600ED59F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CC17DC22B05DD8600ED59F2 /* FairyExample */,
+				5CC17DD72B05DE1300ED59F2 /* PacketTunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CC17DC12B05DD8600ED59F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC17DCE2B05DD8700ED59F2 /* Preview Assets.xcassets in Resources */,
+				5CC17DCB2B05DD8700ED59F2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC17DD62B05DE1300ED59F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CC17DBF2B05DD8600ED59F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC17DC92B05DD8600ED59F2 /* ContentView.swift in Sources */,
+				5CC17DC72B05DD8600ED59F2 /* FairyExampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC17DD42B05DE1300ED59F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC17DDE2B05DE1300ED59F2 /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5CC17DE22B05DE1300ED59F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CC17DD72B05DE1300ED59F2 /* PacketTunnel */;
+			targetProxy = 5CC17DE12B05DE1300ED59F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5CC17DCF2B05DD8700ED59F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5CC17DD02B05DD8700ED59F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CC17DD22B05DD8700ED59F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FairyExample/FairyExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FairyExample/Preview Content\"";
+				DEVELOPMENT_TEAM = 43JNMFY94M;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FairyExample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FairyVPN;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = ai.fairytech.FairyExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CC17DD32B05DD8700ED59F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FairyExample/FairyExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FairyExample/Preview Content\"";
+				DEVELOPMENT_TEAM = 43JNMFY94M;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FairyExample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FairyVPN;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = ai.fairytech.FairyExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5CC17DE52B05DE1300ED59F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 43JNMFY94M;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PacketTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = ai.fairytech.FairyExample.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CC17DE62B05DE1300ED59F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 43JNMFY94M;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PacketTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = ai.fairytech.FairyExample.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CC17DBE2B05DD8600ED59F2 /* Build configuration list for PBXProject "FairyExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC17DCF2B05DD8700ED59F2 /* Debug */,
+				5CC17DD02B05DD8700ED59F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CC17DD12B05DD8700ED59F2 /* Build configuration list for PBXNativeTarget "FairyExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC17DD22B05DD8700ED59F2 /* Debug */,
+				5CC17DD32B05DD8700ED59F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CC17DE42B05DE1300ED59F2 /* Build configuration list for PBXNativeTarget "PacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC17DE52B05DE1300ED59F2 /* Debug */,
+				5CC17DE62B05DE1300ED59F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C26E87C2B4FDA6700A30E7F /* XCRemoteSwiftPackageReference "MomentVPN" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fairytech-external/MomentVPN";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C26E87D2B4FDA6700A30E7F /* Moment */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C26E87C2B4FDA6700A30E7F /* XCRemoteSwiftPackageReference "MomentVPN" */;
+			productName = Moment;
+		};
+		5C26E87F2B4FDA7100A30E7F /* Moment */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C26E87C2B4FDA6700A30E7F /* XCRemoteSwiftPackageReference "MomentVPN" */;
+			productName = Moment;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5CC17DBB2B05DD8600ED59F2 /* Project object */;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MomentApiKey</key>
+	<string>a590b3ef-87de-4338-b631-50cfca53463a</string>
+	<key>MomentGroupId</key>
+	<string>group.ai.fairytech.FairyExample</string>
+	<key>MomentProjectId</key>
+	<string>659512a2f18ee8d22993bdd7</string>
+</dict>
+</plist>
