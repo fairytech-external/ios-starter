@@ -22,7 +22,7 @@ class PacketTunnelProvider: Moment.PacketTunnelProvider {
     
     override func handleRecognitionResult(recognizedInfo: RecognitionInfo) async {
         let notificationContent = UNMutableNotificationContent()
-        
+
         let date: String = {
             let df = DateFormatter()
             df.locale = Locale(identifier: "ko_KR")

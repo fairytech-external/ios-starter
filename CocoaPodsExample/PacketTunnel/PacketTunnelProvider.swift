@@ -20,11 +20,32 @@ import UIKit
 
 class PacketTunnelProvider: Moment.PacketTunnelProvider {
     
-    override func handleRecognitionResult(recognizedBusinessID: String) async {
+    override func handleRecognitionResult(recognizedInfo: RecognitionInfo) async {
         let notificationContent = UNMutableNotificationContent()
+        
+        let date: String = {
+            let df = DateFormatter()
+            df.locale = Locale(identifier: "ko_KR")
+            df.timeZone = TimeZone(abbreviation: "KST")
+            df.dateFormat = "HH:mm"
+            return df.string(from: recognizedInfo.timestamp)
+        }()
+        
+        let activityType: String = {
+            switch recognizedInfo.matchType {
+            case .cart:
+                return "장바구니"
+            case .enter:
+                return "진입"
+            case .payment:
+                return "결제"
+            default:
+                return "알 수 없음"
+            }
+        }()
 
         notificationContent.title = "Fairy Example"
-        notificationContent.body = "\(recognizedBusinessID) 인식"
+        notificationContent.body = "[\(date)] \(recognizedInfo.businessId) - \(activityType) 인식"
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5, repeats: false)
         let request = UNNotificationRequest(identifier: "testNotification",
