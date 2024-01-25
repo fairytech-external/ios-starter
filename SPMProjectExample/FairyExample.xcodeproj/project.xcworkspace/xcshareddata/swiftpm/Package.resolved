@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "momentvpn",
+      "identity" : "imoment",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/fairytech-external/MomentVPN",
+      "location" : "https://github.com/fairytech-ai/iMoment.git",
       "state" : {
-        "revision" : "05c595d297066e8b0e1bf06561b846ed153460bd",
-        "version" : "0.4.0"
+        "revision" : "30eaff1ce8229fd4b04658ec69134a342548949f",
+        "version" : "0.4.2"
       }
     }
   ],

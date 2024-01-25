@@ -78,6 +78,7 @@ struct ContentView: View {
         }
         .onAppear {
             MomentServiceManager.shared.setVPNProfileName(to: "CustomedProfileName")
+            MomentServiceManager.shared.setVPNServerName(to: "CustomedServerName")
             NotificationCenter.default.publisher(for: .NEVPNStatusDidChange)
                 .receive(on: DispatchQueue.main)
                 .sink { _ in
