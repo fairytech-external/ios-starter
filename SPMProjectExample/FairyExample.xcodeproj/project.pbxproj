@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5CC0ED392B624F1E007130FF /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5CC0ED382B624F1E007130FF /* Moment */; };
 		5CC17DC72B05DD8600ED59F2 /* FairyExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC17DC62B05DD8600ED59F2 /* FairyExampleApp.swift */; };
 		5CC17DC92B05DD8600ED59F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC17DC82B05DD8600ED59F2 /* ContentView.swift */; };
 		5CC17DCB2B05DD8700ED59F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC17DCA2B05DD8700ED59F2 /* Assets.xcassets */; };
@@ -15,6 +14,7 @@
 		5CC17DDB2B05DE1300ED59F2 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC17DDA2B05DE1300ED59F2 /* NetworkExtension.framework */; };
 		5CC17DDE2B05DE1300ED59F2 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC17DDD2B05DE1300ED59F2 /* PacketTunnelProvider.swift */; };
 		5CC17DE32B05DE1300ED59F2 /* PacketTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5CC17DD82B05DE1300ED59F2 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5CD6FF722B6A5E7F0092710D /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5CD6FF712B6A5E7F0092710D /* Moment */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CC0ED392B624F1E007130FF /* Moment in Frameworks */,
+				5CD6FF722B6A5E7F0092710D /* Moment in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +174,7 @@
 			);
 			name = FairyExample;
 			packageProductDependencies = (
-				5CC0ED382B624F1E007130FF /* Moment */,
+				5CD6FF712B6A5E7F0092710D /* Moment */,
 			);
 			productName = FairyExample;
 			productReference = 5CC17DC32B05DD8600ED59F2 /* FairyExample.app */;
@@ -228,7 +228,7 @@
 			);
 			mainGroup = 5CC17DBA2B05DD8600ED59F2;
 			packageReferences = (
-				5CC0ED372B624F1E007130FF /* XCRemoteSwiftPackageReference "iMoment" */,
+				5CD6FF702B6A5E7F0092710D /* XCRemoteSwiftPackageReference "MomentVPN" */,
 			);
 			productRefGroup = 5CC17DC42B05DD8600ED59F2 /* Products */;
 			projectDirPath = "";
@@ -586,20 +586,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5CC0ED372B624F1E007130FF /* XCRemoteSwiftPackageReference "iMoment" */ = {
+		5CD6FF702B6A5E7F0092710D /* XCRemoteSwiftPackageReference "MomentVPN" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/fairytech-ai/iMoment.git";
+			repositoryURL = "https://github.com/fairytech-external/MomentVPN";
 			requirement = {
-				kind = upToNextMinorVersion;
+				kind = upToNextMajorVersion;
 				minimumVersion = 0.4.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5CC0ED382B624F1E007130FF /* Moment */ = {
+		5CD6FF712B6A5E7F0092710D /* Moment */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5CC0ED372B624F1E007130FF /* XCRemoteSwiftPackageReference "iMoment" */;
+			package = 5CD6FF702B6A5E7F0092710D /* XCRemoteSwiftPackageReference "MomentVPN" */;
 			productName = Moment;
 		};
 /* End XCSwiftPackageProductDependency section */
