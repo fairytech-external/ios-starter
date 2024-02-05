@@ -136,6 +136,10 @@ struct ContentView: View {
             Task {
                 do {
                     try await MomentServiceManager.shared.start()
+                } catch MomentError.userDeclinedVPNInstallation {
+                    self.isOn = false
+                    errorDescription = "유저가 VPN 프로필 설치를 거부하였습니다."
+                    showErrorAlert = true
                 } catch {
                     self.isOn = false
                     print("Error: \(error)")

@@ -590,8 +590,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/fairytech-external/MomentVPN";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.2;
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

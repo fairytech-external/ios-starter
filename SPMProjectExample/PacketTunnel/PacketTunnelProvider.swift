@@ -19,10 +19,16 @@ import Moment
 import UIKit
 
 class PacketTunnelProvider: Moment.PacketTunnelProvider {
-    
-    override func handleRecognitionResult(recognizedInfo: RecognitionInfo) async {
-        let notificationContent = UNMutableNotificationContent()
+    override init() {
+        super.init()
+        self.basicDelegate = BusinessRecognitionDelegate()
+    }
+}
 
+class BusinessRecognitionDelegate: Moment.BasicDelegate {
+    func handleRecognitionResult(recognizedInfo: RecognitionInfo) async {
+        let notificationContent = UNMutableNotificationContent()
+        
         let date: String = {
             let df = DateFormatter()
             df.locale = Locale(identifier: "ko_KR")
@@ -44,7 +50,7 @@ class PacketTunnelProvider: Moment.PacketTunnelProvider {
             }
         }()
 
-        notificationContent.title = "Fairy Example"
+        notificationContent.title = "Fairy Basic Example"
         notificationContent.body = "[\(date)] \(recognizedInfo.businessId) - \(activityType) 인식"
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5, repeats: false)
