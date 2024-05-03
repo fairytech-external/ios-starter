@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C8EEA072BE49FD200E5C1D0 /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5C8EEA062BE49FD200E5C1D0 /* Moment */; };
+		5C8EEA092BE4A02700E5C1D0 /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5C8EEA082BE4A02700E5C1D0 /* Moment */; };
 		5CC17DC72B05DD8600ED59F2 /* FairyExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC17DC62B05DD8600ED59F2 /* FairyExampleApp.swift */; };
 		5CC17DC92B05DD8600ED59F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC17DC82B05DD8600ED59F2 /* ContentView.swift */; };
 		5CC17DCB2B05DD8700ED59F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC17DCA2B05DD8700ED59F2 /* Assets.xcassets */; };
@@ -14,7 +16,6 @@
 		5CC17DDB2B05DE1300ED59F2 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC17DDA2B05DE1300ED59F2 /* NetworkExtension.framework */; };
 		5CC17DDE2B05DE1300ED59F2 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC17DDD2B05DE1300ED59F2 /* PacketTunnelProvider.swift */; };
 		5CC17DE32B05DE1300ED59F2 /* PacketTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5CC17DD82B05DE1300ED59F2 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5CD6FF722B6A5E7F0092710D /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5CD6FF712B6A5E7F0092710D /* Moment */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD6FF722B6A5E7F0092710D /* Moment in Frameworks */,
+				5C8EEA072BE49FD200E5C1D0 /* Moment in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8EEA092BE4A02700E5C1D0 /* Moment in Frameworks */,
 				5CC17DDB2B05DE1300ED59F2 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,7 +176,7 @@
 			);
 			name = FairyExample;
 			packageProductDependencies = (
-				5CD6FF712B6A5E7F0092710D /* Moment */,
+				5C8EEA062BE49FD200E5C1D0 /* Moment */,
 			);
 			productName = FairyExample;
 			productReference = 5CC17DC32B05DD8600ED59F2 /* FairyExample.app */;
@@ -195,6 +197,7 @@
 			);
 			name = PacketTunnel;
 			packageProductDependencies = (
+				5C8EEA082BE4A02700E5C1D0 /* Moment */,
 			);
 			productName = PacketTunnel;
 			productReference = 5CC17DD82B05DE1300ED59F2 /* PacketTunnel.appex */;
@@ -228,7 +231,7 @@
 			);
 			mainGroup = 5CC17DBA2B05DD8600ED59F2;
 			packageReferences = (
-				5CD6FF702B6A5E7F0092710D /* XCRemoteSwiftPackageReference "MomentVPN" */,
+				5C8EEA052BE49FD200E5C1D0 /* XCRemoteSwiftPackageReference "MomentVPN" */,
 			);
 			productRefGroup = 5CC17DC42B05DD8600ED59F2 /* Products */;
 			projectDirPath = "";
@@ -586,20 +589,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5CD6FF702B6A5E7F0092710D /* XCRemoteSwiftPackageReference "MomentVPN" */ = {
+		5C8EEA052BE49FD200E5C1D0 /* XCRemoteSwiftPackageReference "MomentVPN" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/fairytech-external/MomentVPN";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 0.5.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5CD6FF712B6A5E7F0092710D /* Moment */ = {
+		5C8EEA062BE49FD200E5C1D0 /* Moment */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5CD6FF702B6A5E7F0092710D /* XCRemoteSwiftPackageReference "MomentVPN" */;
+			package = 5C8EEA052BE49FD200E5C1D0 /* XCRemoteSwiftPackageReference "MomentVPN" */;
+			productName = Moment;
+		};
+		5C8EEA082BE4A02700E5C1D0 /* Moment */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C8EEA052BE49FD200E5C1D0 /* XCRemoteSwiftPackageReference "MomentVPN" */;
 			productName = Moment;
 		};
 /* End XCSwiftPackageProductDependency section */
