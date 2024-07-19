@@ -1,9 +1,19 @@
-//
-//  CashbackListViewController.swift
-//  FairyCashback
-//
-//  Created by junkyu kang on 7/19/24.
-//
+/*
+ Fairy Technologies CONFIDENTIAL
+ __________________
+  
+ Copyright (C) Fairy Technologies, Inc - All Rights Reserved
+ 
+ NOTICE:  All information contained herein is, and remains
+ the property of Fairy Technologies Incorporated and its suppliers,
+ if any.  The intellectual and technical concepts contained
+ herein are proprietary to Fairy Technologies Incorporated
+ and its suppliers and may be covered by U.S. and Foreign Patents,
+ patents in process, and are protected by trade secret or copyright law.
+ Dissemination of this information, or reproduction or modification of this material
+ is strictly forbidden unless prior written permission is obtained
+ from Fairy Technologies Incorporated.
+*/
 
 import Foundation
 import UIKit
@@ -35,7 +45,7 @@ class CashbackViewController: UIViewController {
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(CashbackTableViewCell.self, forCellReuseIdentifier: CashbackTableViewCell.identifier)
     }
 
     private func fetchCashbackPrograms() {
@@ -59,10 +69,16 @@ extension CashbackViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CashbackTableViewCell.identifier, for: indexPath) as? CashbackTableViewCell else {
+            fatalError("Failed to dequeue CashbackTableViewCell")
+        }
         let program = cashbackPrograms[indexPath.row]
-        cell.textLabel?.text = program.businessName
+        cell.configure(with: program)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70 
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
