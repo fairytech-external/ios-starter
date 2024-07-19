@@ -77,23 +77,23 @@ struct ContentView: View {
                     
                     Spacer()
                     
-//                    Button(action: {
-//                        isShowingUIKitExample = true
-//                    }) {
-//                        Text("Show Cashback Programs (UIKit)")
-//                            .fontWeight(.semibold)
-//                            .padding()
-//                            .frame(maxWidth: .infinity)
-//                            .background(Color.green)
-//                            .foregroundColor(.white)
-//                            .cornerRadius(10)
-//                            .padding(.horizontal)
-//                    }
-//                    .sheet(isPresented: $isShowingUIKitExample) {
-//                        UIKitExampleView()
-//                    }
-//                    
-//                    Spacer()
+                    Button(action: {
+                        isShowingUIKitExample = true
+                    }) {
+                        Text("Show Cashback Programs (UIKit)")
+                            .fontWeight(.semibold)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            .padding(.horizontal)
+                    }
+                    .sheet(isPresented: $isShowingUIKitExample) {
+                        UIKitCashbackListView()
+                    }
+                    
+                    Spacer()
                 }
                 .padding()
             }

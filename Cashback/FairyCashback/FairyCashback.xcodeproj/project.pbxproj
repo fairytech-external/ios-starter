@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C83900F2C4A25E300CB20D8 /* Moment.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C83900C2C4A25DB00CB20D8 /* Moment.xcframework */; };
 		5C8390102C4A25E300CB20D8 /* Moment.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C83900C2C4A25DB00CB20D8 /* Moment.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C8390142C4A28CC00CB20D8 /* CashbackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8390132C4A28CC00CB20D8 /* CashbackListViewController.swift */; };
 		5CCC5B922C49F13000C4354D /* FairyCashbackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCC5B912C49F13000C4354D /* FairyCashbackApp.swift */; };
 		5CCC5B942C49F13000C4354D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCC5B932C49F13000C4354D /* ContentView.swift */; };
 		5CCC5B962C49F13100C4354D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCC5B952C49F13100C4354D /* Assets.xcassets */; };
@@ -33,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		5C83900C2C4A25DB00CB20D8 /* Moment.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Moment.xcframework; sourceTree = "<group>"; };
+		5C8390112C4A274F00CB20D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5C8390132C4A28CC00CB20D8 /* CashbackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashbackListViewController.swift; sourceTree = "<group>"; };
 		5CCC5B8E2C49F13000C4354D /* FairyCashback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairyCashback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CCC5B912C49F13000C4354D /* FairyCashbackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairyCashbackApp.swift; sourceTree = "<group>"; };
 		5CCC5B932C49F13000C4354D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +65,14 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		5C8390122C4A28B700CB20D8 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				5C8390132C4A28CC00CB20D8 /* CashbackListViewController.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		5CCC5B852C49F13000C4354D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +92,8 @@
 		5CCC5B902C49F13000C4354D /* FairyCashback */ = {
 			isa = PBXGroup;
 			children = (
+				5C8390122C4A28B700CB20D8 /* UIKit */,
+				5C8390112C4A274F00CB20D8 /* Info.plist */,
 				5C83900D2C4A25DB00CB20D8 /* Frameworks */,
 				5CCC5BB82C4A049700C4354D /* SwiftUI */,
 				5CCC5BB32C4A043400C4354D /* Frameworks */,
@@ -194,6 +207,7 @@
 				5CCC5B942C49F13000C4354D /* ContentView.swift in Sources */,
 				5CCC5BBA2C4A04CA00C4354D /* CashbackListView.swift in Sources */,
 				5CCC5B922C49F13000C4354D /* FairyCashbackApp.swift in Sources */,
+				5C8390142C4A28CC00CB20D8 /* CashbackListViewController.swift in Sources */,
 				5CCC5BBC2C4A055300C4354D /* AsyncImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +345,7 @@
 				DEVELOPMENT_TEAM = 43JNMFY94M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FairyCashback/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -364,6 +379,7 @@
 				DEVELOPMENT_TEAM = 43JNMFY94M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FairyCashback/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
