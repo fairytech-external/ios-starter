@@ -41,6 +41,7 @@ class CashbackViewController: UIViewController {
     private func fetchCashbackPrograms() {
         Task {
             do {
+                MomentCashbackService.setUserId("test_user_id")
                 cashbackPrograms = try await MomentCashbackService.listCashback()
                 DispatchQueue.main.async {
                     self.tableView.reloadData()

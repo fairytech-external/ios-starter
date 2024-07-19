@@ -48,7 +48,6 @@ struct ContentView: View {
                     Spacer()
                     
                     Button(action: {
-                        MomentCashbackService.setUserId("test_user_id")
                         fetchCashbackPrograms()
                     }) {
                         Text("Show Cashback Programs (SwiftUI)")
@@ -107,6 +106,7 @@ struct ContentView: View {
         isLoading = true
         Task {
             do {
+                MomentCashbackService.setUserId("test_user_id")
                 cashbackPrograms = try await MomentCashbackService.listCashback()
                 isLoading = false
                 showCashbackListView = true
