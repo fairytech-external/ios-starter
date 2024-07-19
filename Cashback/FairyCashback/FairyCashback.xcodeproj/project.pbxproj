@@ -11,7 +11,23 @@
 		5CCC5B942C49F13000C4354D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCC5B932C49F13000C4354D /* ContentView.swift */; };
 		5CCC5B962C49F13100C4354D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCC5B952C49F13100C4354D /* Assets.xcassets */; };
 		5CCC5B992C49F13100C4354D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCC5B982C49F13100C4354D /* Preview Assets.xcassets */; };
+		5CCC5BB52C4A044C00C4354D /* Moment.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCC5BB22C4A043400C4354D /* Moment.xcframework */; };
+		5CCC5BB62C4A044C00C4354D /* Moment.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCC5BB22C4A043400C4354D /* Moment.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5CCC5BB72C4A044C00C4354D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5CCC5BB62C4A044C00C4354D /* Moment.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5CCC5B8E2C49F13000C4354D /* FairyCashback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairyCashback.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +35,7 @@
 		5CCC5B932C49F13000C4354D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5CCC5B952C49F13100C4354D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CCC5B982C49F13100C4354D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5CCC5BB22C4A043400C4354D /* Moment.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Moment.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CCC5BB52C4A044C00C4354D /* Moment.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +69,7 @@
 		5CCC5B902C49F13000C4354D /* FairyCashback */ = {
 			isa = PBXGroup;
 			children = (
+				5CCC5BB32C4A043400C4354D /* Frameworks */,
 				5CCC5B912C49F13000C4354D /* FairyCashbackApp.swift */,
 				5CCC5B932C49F13000C4354D /* ContentView.swift */,
 				5CCC5B952C49F13100C4354D /* Assets.xcassets */,
@@ -67,6 +86,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5CCC5BB32C4A043400C4354D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CCC5BB22C4A043400C4354D /* Moment.xcframework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +104,7 @@
 				5CCC5B8A2C49F13000C4354D /* Sources */,
 				5CCC5B8B2C49F13000C4354D /* Frameworks */,
 				5CCC5B8C2C49F13000C4354D /* Resources */,
+				5CCC5BB72C4A044C00C4354D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
