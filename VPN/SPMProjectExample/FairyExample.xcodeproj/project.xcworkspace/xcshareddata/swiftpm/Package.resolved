@@ -1,14 +1,15 @@
 {
+  "originHash" : "1d3b041a9efccb9440421dcee841219d6db90f7d24321de3a806dc509a1d15f3",
   "pins" : [
     {
       "identity" : "momentvpn",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/fairytech-external/MomentVPN",
       "state" : {
-        "revision" : "dc47fe25bacbf79e70a77d57f68e0967798324d7",
-        "version" : "0.5.3"
+        "revision" : "bad62a58f9ced1b9b8b4126ff5faa199e83a8c48",
+        "version" : "0.7.0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

@@ -22,7 +22,7 @@ import Moment
 struct FairyExampleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     init() {
-        MomentServiceManager.initialize(packetTunnelBundleIdentifier: "ai.fairytech.FairyExample.PacketTunnel")
+        MomentVPNService.initialize(packetTunnelBundleIdentifier: "ai.fairytech.FairyExample.PacketTunnel")
         
         requestNotificationAuthorization()
     }

@@ -77,8 +77,8 @@ struct ContentView: View {
             Alert(title: Text("Error"), message: Text(errorDescription), dismissButton: .default(Text("Dismiss")))
         }
         .onAppear {
-            MomentServiceManager.shared.setVPNProfileName(to: "CustomedProfileName")
-            MomentServiceManager.shared.setVPNServerName(to: "CustomedServerName")
+            MomentVPNService.shared.setVPNProfileName(to: "CustomedProfileName")
+            MomentVPNService.shared.setVPNServerName(to: "CustomedServerName")
             NotificationCenter.default.publisher(for: .NEVPNStatusDidChange)
                 .receive(on: DispatchQueue.main)
                 .sink { _ in
@@ -91,7 +91,7 @@ struct ContentView: View {
     }
     
     func updateUIForVPNStatus() {
-        MomentServiceManager.shared.withVPNStatus { status in
+        MomentVPNService.shared.withVPNStatus { status in
             if let tunnelStatus = status {
                 updateUI(for: tunnelStatus)
             }
@@ -135,7 +135,7 @@ struct ContentView: View {
         if isOn {
             Task {
                 do {
-                    try await MomentServiceManager.shared.start()
+                    try await MomentVPNService.shared.start()
                 } catch MomentError.userDeclinedVPNInstallation {
                     self.isOn = false
                     errorDescription = "유저가 VPN 프로필 설치를 거부하였습니다."
@@ -148,7 +148,7 @@ struct ContentView: View {
                 }
             }
         } else {
-            MomentServiceManager.shared.stop()
+            MomentVPNService.shared.stop()
         }
     }
 }
