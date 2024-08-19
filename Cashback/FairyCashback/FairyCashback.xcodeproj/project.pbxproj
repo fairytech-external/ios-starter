@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C83900F2C4A25E300CB20D8 /* Moment.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C83900C2C4A25DB00CB20D8 /* Moment.xcframework */; };
-		5C8390102C4A25E300CB20D8 /* Moment.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C83900C2C4A25DB00CB20D8 /* Moment.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C33B8A22C5A0BB40094C8D0 /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5C33B8A12C5A0BB40094C8D0 /* Moment */; };
 		5C8390142C4A28CC00CB20D8 /* CashbackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8390132C4A28CC00CB20D8 /* CashbackListViewController.swift */; };
 		5C8390162C4A2AB100CB20D8 /* CashbackProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8390152C4A2AB100CB20D8 /* CashbackProgramCell.swift */; };
 		5CCC5B922C49F13000C4354D /* FairyCashbackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCC5B912C49F13000C4354D /* FairyCashbackApp.swift */; };
@@ -26,7 +25,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5C8390102C4A25E300CB20D8 /* Moment.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,7 +32,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5C83900C2C4A25DB00CB20D8 /* Moment.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Moment.xcframework; sourceTree = "<group>"; };
 		5C8390112C4A274F00CB20D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C8390132C4A28CC00CB20D8 /* CashbackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashbackListViewController.swift; sourceTree = "<group>"; };
 		5C8390152C4A2AB100CB20D8 /* CashbackProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashbackProgramCell.swift; sourceTree = "<group>"; };
@@ -52,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C83900F2C4A25E300CB20D8 /* Moment.xcframework in Frameworks */,
+				5C33B8A22C5A0BB40094C8D0 /* Moment in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +59,6 @@
 		5C83900D2C4A25DB00CB20D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5C83900C2C4A25DB00CB20D8 /* Moment.xcframework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +146,7 @@
 			);
 			name = FairyCashback;
 			packageProductDependencies = (
+				5C33B8A12C5A0BB40094C8D0 /* Moment */,
 			);
 			productName = FairyCashback;
 			productReference = 5CCC5B8E2C49F13000C4354D /* FairyCashback.app */;
@@ -180,6 +177,7 @@
 			);
 			mainGroup = 5CCC5B852C49F13000C4354D;
 			packageReferences = (
+				5C33B8A02C5A0BB40094C8D0 /* XCRemoteSwiftPackageReference "iMoment" */,
 			);
 			productRefGroup = 5CCC5B8F2C49F13000C4354D /* Products */;
 			projectDirPath = "";
@@ -428,6 +426,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C33B8A02C5A0BB40094C8D0 /* XCRemoteSwiftPackageReference "iMoment" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fairytech-ai/iMoment.git";
+			requirement = {
+				branch = "cashback/0.7.1-vpnX";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C33B8A12C5A0BB40094C8D0 /* Moment */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C33B8A02C5A0BB40094C8D0 /* XCRemoteSwiftPackageReference "iMoment" */;
+			productName = Moment;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5CCC5B862C49F13000C4354D /* Project object */;
 }

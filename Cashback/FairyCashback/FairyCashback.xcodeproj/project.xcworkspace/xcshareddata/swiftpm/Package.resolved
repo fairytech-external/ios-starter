@@ -1,0 +1,15 @@
+{
+  "originHash" : "3451b74e66da115325c998fb16221cf21d440b60dd3dc2df568c3ce1535ef82a",
+  "pins" : [
+    {
+      "identity" : "imoment",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fairytech-ai/iMoment.git",
+      "state" : {
+        "branch" : "cashback/0.7.1-vpnX",
+        "revision" : "f20c14677e8cbfcfb2cfba429ab15bcbdf92f300"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -79,6 +79,7 @@ struct ContentView: View {
         .onAppear {
             MomentVPNService.shared.setVPNProfileName(to: "CustomedProfileName")
             MomentVPNService.shared.setVPNServerName(to: "CustomedServerName")
+            MomentVPNService.shared.setUserId(to: "CustomedUserId")
             NotificationCenter.default.publisher(for: .NEVPNStatusDidChange)
                 .receive(on: DispatchQueue.main)
                 .sink { _ in
@@ -136,7 +137,7 @@ struct ContentView: View {
             Task {
                 do {
                     try await MomentVPNService.shared.start()
-                } catch MomentError.userDeclinedVPNInstallation {
+                } catch VPNServiceError.userDeclinedVPNInstallation {
                     self.isOn = false
                     errorDescription = "유저가 VPN 프로필 설치를 거부하였습니다."
                     showErrorAlert = true
