@@ -19,12 +19,9 @@ import SwiftUI
 import Moment
 
 struct ContentView: View {
-    @State private var isLoading = false
     @State private var showAlert = false
     @State private var alertMessage = ""
-    @State private var cashbackPrograms: [CashbackProgram] = []
-    @State private var showCashbackListView = false
-    @State private var isShowingUIKitExample = false
+    @State private var isNavigating: Bool = false
     
     var body: some View {
         NavigationView {
@@ -47,50 +44,33 @@ struct ContentView: View {
                     
                     Spacer()
                     
+                    NavigationLink(
+                        destination: MomentCashbackService.launchCashbackUI(onFinish: {
+                            print("Cashback UI is dismissed.")
+                            isNavigating = false
+                        })
+                            .edgesIgnoringSafeArea(.all)
+                            .navigationBarTitle("Cashback Programs", displayMode: .inline)
+                            .navigationBarBackButtonHidden(true),
+                        isActive: $isNavigating
+                    ) {
+                        EmptyView()
+                    }
+                    
                     Button(action: {
-                        fetchCashbackPrograms()
+                        MomentCashbackService.setUserId("user-id-is-needed")
+                        isNavigating = true
                     }) {
-                        Text("Show Cashback Programs (SwiftUI)")
+                        Text("Show Cashback Programs")
                             .fontWeight(.semibold)
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.blue)
                             .foregroundColor(.white)
                             .cornerRadius(10)
-                            .padding(.horizontal)
                     }
-                    
-                    NavigationLink(
-                        destination: CashbackListView(cashbackPrograms: cashbackPrograms,
-                                                      showCashbackListView: $showCashbackListView),
-                        isActive: $showCashbackListView,
-                        label: {
-                            EmptyView()
-                        }
-                    )
-                    
-                    if isLoading {
-                        ProgressView("Loading...")
-                            .padding()
-                    }
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        isShowingUIKitExample = true
-                    }) {
-                        Text("Show Cashback Programs (UIKit)")
-                            .fontWeight(.semibold)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .padding(.horizontal)
-                    }
-                    .sheet(isPresented: $isShowingUIKitExample) {
-                        UIKitCashbackListView()
-                    }
+                    .padding(.horizontal)
+                    .padding(.top, 20)
                     
                     Spacer()
                 }
@@ -98,22 +78,6 @@ struct ContentView: View {
             }
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-            }
-        }
-    }
-    
-    func fetchCashbackPrograms() {
-        isLoading = true
-        Task {
-            do {
-                MomentCashbackService.setUserId("test_user_id")
-                cashbackPrograms = try await MomentCashbackService.listCashback()
-                isLoading = false
-                showCashbackListView = true
-            } catch {
-                alertMessage = error.localizedDescription
-                showAlert = true
-                isLoading = false
             }
         }
     }

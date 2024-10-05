@@ -7,15 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C33B8A22C5A0BB40094C8D0 /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5C33B8A12C5A0BB40094C8D0 /* Moment */; };
-		5C8390142C4A28CC00CB20D8 /* CashbackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8390132C4A28CC00CB20D8 /* CashbackListViewController.swift */; };
-		5C8390162C4A2AB100CB20D8 /* CashbackProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8390152C4A2AB100CB20D8 /* CashbackProgramCell.swift */; };
 		5CCC5B922C49F13000C4354D /* FairyCashbackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCC5B912C49F13000C4354D /* FairyCashbackApp.swift */; };
 		5CCC5B942C49F13000C4354D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCC5B932C49F13000C4354D /* ContentView.swift */; };
 		5CCC5B962C49F13100C4354D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCC5B952C49F13100C4354D /* Assets.xcassets */; };
 		5CCC5B992C49F13100C4354D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCC5B982C49F13100C4354D /* Preview Assets.xcassets */; };
-		5CCC5BBA2C4A04CA00C4354D /* CashbackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCC5BB92C4A04CA00C4354D /* CashbackListView.swift */; };
-		5CCC5BBC2C4A055300C4354D /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCC5BBB2C4A055300C4354D /* AsyncImageView.swift */; };
+		5CE11D932CB1433700006ADF /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5CE11D922CB1433700006ADF /* Moment */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,15 +29,11 @@
 
 /* Begin PBXFileReference section */
 		5C8390112C4A274F00CB20D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		5C8390132C4A28CC00CB20D8 /* CashbackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashbackListViewController.swift; sourceTree = "<group>"; };
-		5C8390152C4A2AB100CB20D8 /* CashbackProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashbackProgramCell.swift; sourceTree = "<group>"; };
 		5CCC5B8E2C49F13000C4354D /* FairyCashback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairyCashback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CCC5B912C49F13000C4354D /* FairyCashbackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairyCashbackApp.swift; sourceTree = "<group>"; };
 		5CCC5B932C49F13000C4354D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5CCC5B952C49F13100C4354D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CCC5B982C49F13100C4354D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5CCC5BB92C4A04CA00C4354D /* CashbackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CashbackListView.swift; path = "../../../../../../../.Trash/untitled folder/FairyCashback/FairyCashback/SwiftUI/CashbackListView.swift"; sourceTree = "<group>"; };
-		5CCC5BBB2C4A055300C4354D /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C33B8A22C5A0BB40094C8D0 /* Moment in Frameworks */,
+				5CE11D932CB1433700006ADF /* Moment in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,15 +53,6 @@
 			children = (
 			);
 			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		5C8390122C4A28B700CB20D8 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				5C8390132C4A28CC00CB20D8 /* CashbackListViewController.swift */,
-				5C8390152C4A2AB100CB20D8 /* CashbackProgramCell.swift */,
-			);
-			path = UIKit;
 			sourceTree = "<group>";
 		};
 		5CCC5B852C49F13000C4354D = {
@@ -91,7 +74,6 @@
 		5CCC5B902C49F13000C4354D /* FairyCashback */ = {
 			isa = PBXGroup;
 			children = (
-				5C8390122C4A28B700CB20D8 /* UIKit */,
 				5C8390112C4A274F00CB20D8 /* Info.plist */,
 				5C83900D2C4A25DB00CB20D8 /* Frameworks */,
 				5CCC5BB82C4A049700C4354D /* SwiftUI */,
@@ -122,8 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				5CCC5B932C49F13000C4354D /* ContentView.swift */,
-				5CCC5BB92C4A04CA00C4354D /* CashbackListView.swift */,
-				5CCC5BBB2C4A055300C4354D /* AsyncImageView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -146,7 +126,7 @@
 			);
 			name = FairyCashback;
 			packageProductDependencies = (
-				5C33B8A12C5A0BB40094C8D0 /* Moment */,
+				5CE11D922CB1433700006ADF /* Moment */,
 			);
 			productName = FairyCashback;
 			productReference = 5CCC5B8E2C49F13000C4354D /* FairyCashback.app */;
@@ -177,7 +157,7 @@
 			);
 			mainGroup = 5CCC5B852C49F13000C4354D;
 			packageReferences = (
-				5C33B8A02C5A0BB40094C8D0 /* XCRemoteSwiftPackageReference "iMoment" */,
+				5CE11D912CB1433700006ADF /* XCRemoteSwiftPackageReference "Cashback-iOS" */,
 			);
 			productRefGroup = 5CCC5B8F2C49F13000C4354D /* Products */;
 			projectDirPath = "";
@@ -206,11 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CCC5B942C49F13000C4354D /* ContentView.swift in Sources */,
-				5CCC5BBA2C4A04CA00C4354D /* CashbackListView.swift in Sources */,
-				5C8390162C4A2AB100CB20D8 /* CashbackProgramCell.swift in Sources */,
 				5CCC5B922C49F13000C4354D /* FairyCashbackApp.swift in Sources */,
-				5C8390142C4A28CC00CB20D8 /* CashbackListViewController.swift in Sources */,
-				5CCC5BBC2C4A055300C4354D /* AsyncImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,20 +404,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5C33B8A02C5A0BB40094C8D0 /* XCRemoteSwiftPackageReference "iMoment" */ = {
+		5CE11D912CB1433700006ADF /* XCRemoteSwiftPackageReference "Cashback-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/fairytech-ai/iMoment.git";
+			repositoryURL = "https://github.com/fairytech-external/Cashback-iOS";
 			requirement = {
-				branch = "cashback/0.7.1-vpnX";
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5C33B8A12C5A0BB40094C8D0 /* Moment */ = {
+		5CE11D922CB1433700006ADF /* Moment */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5C33B8A02C5A0BB40094C8D0 /* XCRemoteSwiftPackageReference "iMoment" */;
+			package = 5CE11D912CB1433700006ADF /* XCRemoteSwiftPackageReference "Cashback-iOS" */;
 			productName = Moment;
 		};
 /* End XCSwiftPackageProductDependency section */

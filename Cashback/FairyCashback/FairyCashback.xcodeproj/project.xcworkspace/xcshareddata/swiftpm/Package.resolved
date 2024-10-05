@@ -1,13 +1,13 @@
 {
-  "originHash" : "3451b74e66da115325c998fb16221cf21d440b60dd3dc2df568c3ce1535ef82a",
+  "originHash" : "eca65ed64ae5a86e2066d2cdc1661ff238ae0537a7e60154a70fd1f71abcc7fb",
   "pins" : [
     {
-      "identity" : "imoment",
+      "identity" : "cashback-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/fairytech-ai/iMoment.git",
+      "location" : "https://github.com/fairytech-external/Cashback-iOS",
       "state" : {
-        "branch" : "cashback/0.7.1-vpnX",
-        "revision" : "f20c14677e8cbfcfb2cfba429ab15bcbdf92f300"
+        "revision" : "8b46b368ac3f458d8c9d8f812a5f365d84f42efc",
+        "version" : "0.8.0"
       }
     }
   ],
