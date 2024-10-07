@@ -49,8 +49,8 @@ struct ContentView: View {
                             print("Cashback UI is dismissed.")
                             isNavigating = false
                         })
-                            .edgesIgnoringSafeArea(.all)
-                            .navigationBarTitle("Cashback Programs", displayMode: .inline)
+                            .edgesIgnoringSafeArea(.bottom)
+                            .navigationBarTitle("", displayMode: .inline)
                             .navigationBarBackButtonHidden(true),
                         isActive: $isNavigating
                     ) {
