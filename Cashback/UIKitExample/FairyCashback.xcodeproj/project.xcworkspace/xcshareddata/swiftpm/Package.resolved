@@ -1,0 +1,15 @@
+{
+  "originHash" : "eca65ed64ae5a86e2066d2cdc1661ff238ae0537a7e60154a70fd1f71abcc7fb",
+  "pins" : [
+    {
+      "identity" : "cashback-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fairytech-external/Cashback-iOS",
+      "state" : {
+        "revision" : "4f7568605cbb485a8abba560d0115547d043c002",
+        "version" : "0.8.1"
+      }
+    }
+  ],
+  "version" : 3
+}
