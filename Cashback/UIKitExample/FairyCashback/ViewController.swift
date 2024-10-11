@@ -6,11 +6,9 @@
 //
 
 import UIKit
-import SwiftUI
 import Moment
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +27,7 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 8
 
         // Add action to the button
-        button.addTarget(self, action: #selector(showCashbackUI), for: .touchUpInside)
+        button.addTarget(self, action: #selector(presentCashback), for: .touchUpInside)
 
         // Enable Auto Layout
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -46,26 +44,38 @@ class ViewController: UIViewController {
         ])
     }
 
-    @objc func showCashbackUI() {
-        // Set the user ID before launching the CashbackUI
+    @objc func presentCashback() {
+        // 캐시백 UI를 표시하기 전에 사용자 ID 설정
         MomentCashbackService.setUserId("user-id-is-needed")
 
-        // Create the CashbackUI SwiftUI view with the onFinish closure
-        let cashbackUI = MomentCashbackService.launchCashbackUI(onFinish: {
-            // Pop the view controller when onFinish is called
-            self.navigationController?.popViewController(animated: true)
-        })
+        // CashbackViewController 인스턴스 생성
+        let cashbackVC = CashbackViewController()
+        cashbackVC.delegate = self
 
-        // Wrap the SwiftUI view in a UIHostingController
-        let hostingController = UIHostingController(rootView: cashbackUI)
-
-        // Ensure the hostingController fills the entire screen
-        hostingController.view.backgroundColor = .white
-        
+        // 권장사항에 따라 내비게이션 바 숨기기
         self.navigationController?.setNavigationBarHidden(true, animated: true)
 
-        // Push the hostingController onto the navigation stack
-        self.navigationController?.pushViewController(hostingController, animated: true)
+        // CashbackViewController를 내비게이션 스택에 푸시
+        self.navigationController?.pushViewController(cashbackVC, animated: true)
     }
 }
 
+// MARK: - CashbackViewControllerDelegate Methods
+extension ViewController: CashbackViewControllerDelegate {
+    func cashbackViewControllerDidFinish(_ viewController: CashbackViewController) {
+        // Handle finish
+        navigationController?.popViewController(animated: true)
+
+        // Optionally show the navigation bar again
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
+    func cashbackViewController(_ viewController: CashbackViewController, didFailWithError error: CashbackError) {
+        // Handle error - 예시입니다.
+        print("Error: \(error.localizedDescription)")
+        navigationController?.popViewController(animated: true)
+
+        // Optionally show the navigation bar again
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+}
