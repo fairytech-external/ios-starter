@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/fairytech-external/Cashback-iOS",
       "state" : {
-        "revision" : "2999499b461f712b85d9f2ec39b2b8dc5a7c497d",
-        "version" : "0.8.2"
+        "revision" : "a7ed1154bcc05d5d4231dd88932b8a5a24ae097e",
+        "version" : "0.8.3"
       }
     }
   ],

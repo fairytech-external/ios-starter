@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C8A9E622CB929920069C58A /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5C8A9E612CB929920069C58A /* Moment */; };
+		5CA16CAC2CBDFEDB0092553C /* Moment in Frameworks */ = {isa = PBXBuildFile; productRef = 5CA16CAB2CBDFEDB0092553C /* Moment */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C8A9E622CB929920069C58A /* Moment in Frameworks */,
+				5CA16CAC2CBDFEDB0092553C /* Moment in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			);
 			name = FairyCashback;
 			packageProductDependencies = (
-				5C8A9E612CB929920069C58A /* Moment */,
+				5CA16CAB2CBDFEDB0092553C /* Moment */,
 			);
 			productName = FairyCashback;
 			productReference = 5C8A9E0A2CB7BEC70069C58A /* FairyCashback.app */;
@@ -128,7 +128,7 @@
 			mainGroup = 5C8A9E012CB7BEC70069C58A;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				5C8A9E602CB929920069C58A /* XCRemoteSwiftPackageReference "Cashback-iOS" */,
+				5CA16CAA2CBDFEDB0092553C /* XCRemoteSwiftPackageReference "Cashback-iOS" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5C8A9E0B2CB7BEC70069C58A /* Products */;
@@ -362,20 +362,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5C8A9E602CB929920069C58A /* XCRemoteSwiftPackageReference "Cashback-iOS" */ = {
+		5CA16CAA2CBDFEDB0092553C /* XCRemoteSwiftPackageReference "Cashback-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/fairytech-external/Cashback-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.8.2;
+				minimumVersion = 0.8.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5C8A9E612CB929920069C58A /* Moment */ = {
+		5CA16CAB2CBDFEDB0092553C /* Moment */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5C8A9E602CB929920069C58A /* XCRemoteSwiftPackageReference "Cashback-iOS" */;
+			package = 5CA16CAA2CBDFEDB0092553C /* XCRemoteSwiftPackageReference "Cashback-iOS" */;
 			productName = Moment;
 		};
 /* End XCSwiftPackageProductDependency section */
