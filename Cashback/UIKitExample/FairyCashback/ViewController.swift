@@ -9,66 +9,73 @@ import UIKit
 import Moment
 
 class ViewController: UIViewController {
-    private var cashbackView: CashbackView?
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Set up the user interface
+        // Set the background color
         view.backgroundColor = .white
 
-        // Add a button to present the cashback view
-        let showCashbackButton = UIButton(type: .system)
-        showCashbackButton.setTitle("Show Cashback", for: .normal)
-        showCashbackButton.addTarget(self, action: #selector(showCashback), for: .touchUpInside)
+        // Set the title
+        self.title = "Home"
 
-        showCashbackButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(showCashbackButton)
+        // Create and configure the button
+        let button = UIButton(type: .system)
+        button.setTitle("Show Cashback Programs", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.backgroundColor = .systemBlue
+        button.tintColor = .white
+        button.layer.cornerRadius = 8
+
+        // Add action to the button
+        button.addTarget(self, action: #selector(presentCashback), for: .touchUpInside)
+
+        // Enable Auto Layout
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        // Add the button to the view
+        view.addSubview(button)
+
+        // Set up constraints to center the button
         NSLayoutConstraint.activate([
-            showCashbackButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            showCashbackButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            button.widthAnchor.constraint(equalToConstant: 250),
+            button.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 
-    @objc func showCashback() {
-        // Set the user ID before using CashbackView
+    @objc func presentCashback() {
+        // 캐시백 UI를 표시하기 전에 사용자 ID 설정
         MomentCashbackService.setUserId("user-id-is-needed")
 
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        // CashbackViewController 인스턴스 생성
+        let cashbackVC = CashbackViewController()
+        cashbackVC.delegate = self
 
-        // Create and configure CashbackView
-        let cashbackView = CashbackView(
-            onFinish: { [weak self] in
-                self?.removeCashbackView()
-                print("Cashback finished")
-                self?.navigationController?.setNavigationBarHidden(false, animated: false)
-            },
-            onFailure: { [weak self] error in
-                print("Error: \(error.localizedDescription)")
-                self?.navigationController?.setNavigationBarHidden(false, animated: false)
-            }
-        )
+        // 권장사항에 따라 내비게이션 바 숨기기
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
 
-        // Store a reference to cashbackView
-        self.cashbackView = cashbackView
+        // CashbackViewController를 내비게이션 스택에 푸시
+        self.navigationController?.pushViewController(cashbackVC, animated: true)
+    }
+}
 
-        // Add CashbackView to the view hierarchy
-        self.view.addSubview(cashbackView)
+// MARK: - CashbackViewControllerDelegate Methods
+extension ViewController: CashbackViewControllerDelegate {
+    func cashbackViewControllerDidFinish(_ viewController: CashbackViewController) {
+        // Handle finish
+        navigationController?.popViewController(animated: true)
 
-        // Set up constraints
-        cashbackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            cashbackView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            cashbackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            cashbackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            cashbackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
-        ])
+        // Optionally show the navigation bar again
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
-    private func removeCashbackView() {
-        if let cashbackView = self.cashbackView {
-            cashbackView.removeFromSuperview()
-            self.cashbackView = nil
-        }
+    func cashbackViewController(_ viewController: CashbackViewController, didFailWithError error: CashbackError) {
+        // Handle error - 예시입니다.
+        print("Error: \(error.localizedDescription)")
+        navigationController?.popViewController(animated: true)
+
+        // Optionally show the navigation bar again
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
