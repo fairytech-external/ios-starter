@@ -8,7 +8,7 @@
 import UIKit
 import Moment
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +42,16 @@ class ViewController: UIViewController {
             button.widthAnchor.constraint(equalToConstant: 250),
             button.heightAnchor.constraint(equalToConstant: 50)
         ])
+        
+        self.navigationController?.delegate = self
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if viewController is CashbackViewController {
+            navigationController.setNavigationBarHidden(true, animated: animated)
+        } else {
+            navigationController.setNavigationBarHidden(false, animated: animated)
+        }
     }
 
     @objc func presentCashback() {
@@ -53,7 +63,7 @@ class ViewController: UIViewController {
         cashbackVC.delegate = self
 
         // 권장사항에 따라 내비게이션 바 숨기기
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+//        self.navigationController?.setNavigationBarHidden(true, animated: true)
 
         // CashbackViewController를 내비게이션 스택에 푸시
         self.navigationController?.pushViewController(cashbackVC, animated: true)
@@ -67,7 +77,7 @@ extension ViewController: CashbackViewControllerDelegate {
         navigationController?.popViewController(animated: true)
 
         // Optionally show the navigation bar again
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+//        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     func cashbackViewController(_ viewController: CashbackViewController, didFailWithError error: CashbackError) {
