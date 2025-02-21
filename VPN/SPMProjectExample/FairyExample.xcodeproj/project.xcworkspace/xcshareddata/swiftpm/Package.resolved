@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/fairytech-external/MomentVPN",
       "state" : {
-        "revision" : "bad62a58f9ced1b9b8b4126ff5faa199e83a8c48",
-        "version" : "0.7.0"
+        "revision" : "31120ed8099a8a95d27f7a586d340ddcdf819401",
+        "version" : "1.0.4"
       }
     }
   ],

@@ -55,7 +55,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
     let userNotificationCenter = UNUserNotificationCenter.current()
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        if let isFromMoment = response.notification.request.content.userInfo[MomentConstants.MOMENT_NOTIFICATION_KEY] as? Bool, isFromMoment{
+        if let isFromMoment = response.notification.request.content.userInfo[MomentConstants.fairyNotification] as? Bool, isFromMoment{
 //            handleMomentNotification(response: response)
         } else {
             // Handle non-Moment notification
